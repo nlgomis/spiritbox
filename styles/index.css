@@ -1,0 +1,537 @@
+
+
+.glitch-wrapper {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.glitch {
+   position: relative;
+   font-size: 47px;
+   color: #FFFFFF;
+   letter-spacing: 3px;
+   z-index: 1;
+}
+
+.glitch:before {
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: -2px;
+   width: 100%;
+   color: 47px;
+   overflow: hidden;
+   clip: rect(0, 900px, 0, 0);
+   animation: noise-before 3s infinite linear alternate-reverse;
+}
+
+.glitch:after {
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: 2px;
+   width: 100%;
+   color: 47px;
+   overflow: hidden;
+   clip: rect(0, 900px, 0, 0);
+   animation: noise-after 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-before {
+   0% {
+      clip: rect(61px, 9999px, 52px, 0);
+   }
+   5% {
+      clip: rect(33px, 9999px, 144px, 0);
+   }
+   10% {
+      clip: rect(121px, 9999px, 115px, 0);
+   }
+   15% {
+      clip: rect(144px, 9999px, 162px, 0);
+   }
+   20% {
+      clip: rect(62px, 9999px, 180px, 0);
+   }
+   25% {
+      clip: rect(34px, 9999px, 42px, 0);
+   }
+   30% {
+      clip: rect(147px, 9999px, 179px, 0);
+   }
+   35% {
+      clip: rect(99px, 9999px, 63px, 0);
+   }
+   40% {
+      clip: rect(188px, 9999px, 122px, 0);
+   }
+   45% {
+      clip: rect(154px, 9999px, 14px, 0);
+   }
+   50% {
+      clip: rect(63px, 9999px, 37px, 0);
+   }
+   55% {
+      clip: rect(161px, 9999px, 147px, 0);
+   }
+   60% {
+      clip: rect(109px, 9999px, 175px, 0);
+   }
+   65% {
+      clip: rect(157px, 9999px, 88px, 0);
+   }
+   70% {
+      clip: rect(173px, 9999px, 131px, 0);
+   }
+   75% {
+      clip: rect(62px, 9999px, 70px, 0);
+   }
+   80% {
+      clip: rect(24px, 9999px, 153px, 0);
+   }
+   85% {
+      clip: rect(138px, 9999px, 40px, 0);
+   }
+   90% {
+      clip: rect(79px, 9999px, 136px, 0);
+   }
+   95% {
+      clip: rect(25px, 9999px, 34px, 0);
+   }
+   100% {
+      clip: rect(173px, 9999px, 166px, 0);
+   }
+}
+
+@keyframes noise-after {
+   0% {
+      clip: rect(26px, 9999px, 33px, 0);
+   }
+   5% {
+      clip: rect(140px, 9999px, 198px, 0);
+   }
+   10% {
+      clip: rect(184px, 9999px, 89px, 0);
+   }
+   15% {
+      clip: rect(121px, 9999px, 6px, 0);
+   }
+   20% {
+      clip: rect(181px, 9999px, 99px, 0);
+   }
+   25% {
+      clip: rect(154px, 9999px, 133px, 0);
+   }
+   30% {
+      clip: rect(134px, 9999px, 169px, 0);
+   }
+   35% {
+      clip: rect(26px, 9999px, 187px, 0);
+   }
+   40% {
+      clip: rect(147px, 9999px, 137px, 0);
+   }
+   45% {
+      clip: rect(31px, 9999px, 52px, 0);
+   }
+   50% {
+      clip: rect(191px, 9999px, 109px, 0);
+   }
+   55% {
+      clip: rect(74px, 9999px, 54px, 0);
+   }
+   60% {
+      clip: rect(145px, 9999px, 75px, 0);
+   }
+   65% {
+      clip: rect(153px, 9999px, 198px, 0);
+   }
+   70% {
+      clip: rect(99px, 9999px, 136px, 0);
+   }
+   75% {
+      clip: rect(118px, 9999px, 192px, 0);
+   }
+   80% {
+      clip: rect(1px, 9999px, 83px, 0);
+   }
+   85% {
+      clip: rect(145px, 9999px, 98px, 0);
+   }
+   90% {
+      clip: rect(121px, 9999px, 154px, 0);
+   }
+   95% {
+      clip: rect(156px, 9999px, 44px, 0);
+   }
+   100% {
+      clip: rect(67px, 9999px, 122px, 0);
+   }
+}
+
+        video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  
+  
+}
+
+.grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+div > iframe {
+  padding: 10px;
+  overflow: hidden;
+}
+
+html, body {
+  height: 100%;
+  background: rgba(black, 0.5);
+
+  
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 150%;
+  line-height: 1.4;
+}
+body {
+  margin: 0;
+}
+
+.viewport-header {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+ 
+  line-height: 1.2;
+  font-size: 4vw;
+  text-align: center;
+  
+  
+}
+
+main {
+  background: rgba(black, 0.66);
+  color: white;
+  position: relative;
+ 
+}
+
+h1 
+    span {
+      display: block;
+      font-size: 10vw;
+      letter-spacing: -1.3vw;
+    }
+  
+  
+
+
+
+.main {
+        background-color: rgba(0, 0, 0, 0.16);
+        color: white;
+       
+}
+.translucent-background {
+  background-color: rgba(0, 0, 0, 0.80);
+}
+
+
+.about-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding: 40px;
+        color: white;
+        margin: 10px auto;
+        padding-top: 170px;
+        max-width: 1000px; /* Adjust the max-width as needed */
+    }
+
+    .about-content {
+        flex: 1;
+        text-align: left;
+        padding-right: 20px;
+    }
+
+    .about-image {
+        flex: 1;
+        text-align: right;
+    }
+
+    .about-image img {
+        object-fit: contain;
+        width: 100%;
+    height: 100%;
+    }
+
+
+
+    @media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .about-content {
+        padding-right: 0; /* Remove right padding */
+    }
+
+    .about-image {
+        text-align: center; /* Center the image */
+    }
+}
+
+
+
+
+.about-section h2 {
+ 
+  font-size: 1.4rem; /* Adjust the font size for the title */
+  margin-bottom: 15px;
+  color: #e8d8ee;
+  border-bottom: 2px solid #963dba;
+ }
+
+
+.about-section  p {
+    position: relative;
+    padding-top: 10px; /* Add padding to the top of the <p> tag for border spacing */
+}
+
+
+
+
+
+.about-section p {
+    font-size: 0.7rem; /* Adjust the font size for the description */
+    text-align: justify;
+}
+
+
+
+.new-single-section{
+  padding-top: 150px;
+}
+
+.new-single-section h2{
+  font-size: 1.4rem; /* Adjust the font size for the title */
+  margin-bottom: 15px;
+  color: #FFFFFF;
+}
+
+.new-single-section p{
+  font-size: 0.8rem; /* Adjust the font size for the title */
+  color: #FFFFFF;
+}
+
+.new-single-section h2:hover {
+  font-size: 1.4rem; /* Adjust the font size for the title */
+  margin-bottom: 15px;
+  color: #e8d8ee;
+  border-bottom: 2px solid #963dba;
+  display: inline-block; 
+
+ }
+
+
+/* Estilos para la nueva sección de imagen */
+.image-section {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 70px;
+  overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+  min-height: 600px; /* Altura mínima de la sección de imagen */
+  z-index: 0; /* Asegura que la imagen esté por detrás de otros elementos */
+}
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  max-width: 800px;
+}
+
+.image-overlay h2 {
+  font-size: 1.4rem;
+  display: inline-block; 
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-bottom: 2px solid #963dba;
+ }
+
+
+.image-overlay p {
+  font-size: 0.7rem;
+  text-align: justify;
+}
+
+/* Estilos para la imagen */
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; /* Posición absoluta para cubrir toda la sección */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.footer-image-section {
+   position: relative;
+   text-align: center;
+   color: white;
+   margin-top: 0px;
+   overflow: hidden; /* Hide any overflowing content */
+   min-height: 150px; /* Minimum height for the image section */
+   z-index: 0; /* Ensure the image is behind other elements */
+}
+
+.footer-image-overlay {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center; /* Center the Instagram images horizontally */
+   max-width: 800px;
+   z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+/* Use the .img-logo class to style Instagram images */
+.img-logo {
+   height: 30px;
+   width: 30px;
+   margin: 0 10px; /* Add some spacing between the images */
+   position: relative; /* Ensure the images are positioned relative to the overlay */
+   z-index: 2; /* Ensure the images are above the background image */
+}
+
+/* Styles for the image */
+.footer-image-section img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   position: absolute; /* Absolute position to cover the entire section */
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+
+
+.video-section {
+   text-align: center;
+   margin-top: 50px;
+   background: linear-gradient(to bottom, rgba(3, 94, 105, 0), rgba(3, 94, 105, 0.4)); /* Cambia los valores RGBA según tu preferencia */
+   padding-left: 80px;
+   padding-right: 80px;
+}
+
+
+
+
+
+.video-section h2{
+color: white;
+margin-bottom: 80px;
+justify-content: right;
+border-bottom: 2px solid #963dba;
+display: inline-block; 
+}
+
+.video-row {
+   display: grid; 
+   grid-template-columns: repeat(2, 1fr); 
+   gap: 20px; /* Add some gap between the videos */
+   margin-top: 20px;
+}
+
+.video-col {
+   flex: 0 0 calc(33.333% - 10px); /* Tres columnas en una fila */
+   margin-bottom: 20px;
+   box-sizing: border-box;
+}
+
+.video-col iframe {
+   
+   border: none;
+}
+
+
+#navbar-placeholder {
+    height: 61.5px; /* Adjust the height based on your navbar's height */
+    display: none; /* Hide by default */
+}
+
+.navbar.fixed-top + #navbar-placeholder {
+    display: block; /* Show when navbar becomes fixed */
+}
+
+ /* Animation styles */
+ @keyframes lineAnimation {
+    0%, 100% {
+        width: 0;
+        left: calc(50% - 1px); /* Start and end at the center */
+    }
+    50% {
+        width: 100%; /* Expand to full width */
+        left: 0; /* Move to the left edge */
+    }
+}
+
+
+
+
+    .scroll-line-container {
+        text-align: center;
+        position: relative; /* Position the line container */
+    }
+    .scroll-line {
+            width: 0;
+            height: 2px;
+            background-color: #fdf7ff;
+            margin: 20px auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* Center the line */
+            transition: width 2.5s;
+            max-width: 80%; /* Set a maximum width for the line */
+        }
+
+        .instagram-icons {
+         display: flex;
+         justify-content: center; /* Center horizontally */
+         align-items: center; /* Center vertically */
+         margin-top: 20px;
+         z-index: 1;
+      }
+      
+      .img-logo {
+         height: 30px;
+         width: 30px;
+         margin: 0 10px; /* Add some horizontal spacing between the icons */
+      }
